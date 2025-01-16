@@ -6,18 +6,6 @@ module.exports = {
     "./src/**/*.{js,ts,vue,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      'small': '521px',
-      'sm':'640px',
-      'md':'768px',
-      'mid':'700px',
-      'lg':'1024px'
-    },
-    zIndex: {
-      "60": "60",
-      "70": "70",
-      "80": "80",
-  },
     extend: {
       fontFamily:{
         "client": ["var(--client-font)"]
@@ -56,10 +44,7 @@ module.exports = {
      
     },
   },
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ],
+  plugins: [],
 }
 
 

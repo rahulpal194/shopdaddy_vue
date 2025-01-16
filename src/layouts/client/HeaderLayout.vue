@@ -1,5 +1,5 @@
 <template>
-     <header class="header pt-3 shadow-header bg-white w-full z-[20] fixed top-0">
+     <header class="header pt-3 shadow-header bg-white w-full ">
         <div class="container pb-4 lg:pb-0">
             <!-- Top Navigation Bar -->
              <div class="top_nav transition-all flex justify-between items-center text-sm font-normal mb-6 md:mb-8">
@@ -11,38 +11,26 @@
                         <li><a href="#" class="flex items-center"><i class="lab-line-call-calling text-base mr-2"></i>+98563214589</a></li>
                     </ul>  
                 </nav>
-                <div class="flex ">
+                <div class="flex">
                     <div class="relative dropdown-group">
-                        <button class="dropdown-btn flex items-center justify-center  gap-2 rounded-xl ">
+                        <button type="button" @click.prevent="handlePaper" class="dropdown-btn flex items-center justify-center  gap-2 rounded-xl ">
                             <i class="lab-line-currencies text-base"></i>
-                            <span id="current-currency" class="whitespace-nowrap">USD</span>
+                            <span id="current-currency" class="whitespace-nowrap"></span>
                             <i class="dropdown-icon lab-line-chevron-down text-xs "></i>
                         </button>
-                        <ul class="dropdown-list text-left w-full absolute top-6 right-0 z-[30] text-sm font-normal bg-white shadow-header p-4 rounded-xl">
-                            <li class="pb-3 hover:text-primary"><a href="">USD</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="">BDT</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="">SAR</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="">DEM</a></li>
-                            <li class="hover:text-primary"><a href="">TRY</a></li>
-                        </ul>
+                        <CurrencyPaperComponent/>
                     </div>
                     <div class="relative ps-8 dropdown-group">
                         <button class="dropdown-btn flex items-center justify-center gap-2 rounded-xl transition h-6" >
-                            <img id="current-flag" src="../../images/flag/united-states.png" alt="Current Flag"  class="w-4 h-4 rounded-full"> 
+                            <img id="current-flag" src="/images/flag/united-states.png" alt="Current Flag"  class="w-4 h-4 rounded-full"> 
                             <span id="current-lang" class="whitespace-nowrap">English</span>
                             <i class="dropdown-icon lab-line-chevron-down text-xs"></i>
                         </button>
-                        <ul class="dropdown-list max-w-28 w-full text-sm absolute top-6 right-0 z-[30] font-normal bg-white shadow-header p-4 rounded-xl hidden">
-                            <li class="pb-3 hover:text-primary"><a href="" class="flex items-center gap-2"><img src="../../images/flag/united-states.png" class="w-4 h-4 rounded-full" alt="US">English</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="" class="flex items-center gap-2"><img src="../../images/flag/bangladesh.png" class="w-4 h-4 rounded-full" alt="US">Bangla</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="" class="flex items-center gap-2"><img src="../../images/flag/china.png" class="w-4 h-4 rounded-full" alt="US">China</a></li>
-                            <li class="pb-3 hover:text-primary"><a href="" class="flex items-center gap-2"><img src="../../images/flag/germany.png" class="w-4 h-4 rounded-full" alt="US">German</a></li>
-                            <li class="hover:text-primary"><a href="" class="flex items-center gap-2"><img src="../../images/flag/saudi-arabia.png" class="w-4 h-4 rounded-full" alt="US">Arabia</a></li>
-                        </ul>
+                        <LanguagePaperComponent/>
                     </div>
                 </div>
              </div>
-             <div class="flex items-center hidden">  
+             <div class="items-center hidden">  
                 <button class="search-hide lab-line-long-arrow-left text-2xl mr-2"></button>
                 <div class="dropdown-group relative w-full h-11 border border-light-white focus-within:border-primary rounded-xl lg:flex items-center ps-3 p-[3px] flex transition-all duration-300">
                     <button class="dropdown-btn text-left flex items-center gap-2 text-sm font-medium whitespace-nowrap pr-2">All Categories <i class="dropdown-icon lab-fill-arrow-down text-xl" ></i></button>
@@ -71,7 +59,7 @@
                     <i class="lab-line-dashboard text-2xl "></i>
                </button> 
                 <a href="./home.html" class="max-w-36 flex-shrink-0">
-                    <img src="../../images/header/logo.png" alt="Logo" class="w-full">
+                    <img src="/images/header/logo.png" alt="Logo" class="w-full">
                 </a>
                 <div class="dropdown-group max-w-[550px] relative w-full h-11 border border-light-white focus-within:border-primary rounded-xl lg:flex items-center ps-3 p-[3px]  hidden transition-all duration-300">
                     <button class="dropdown-btn text-left flex items-center gap-2 text-sm font-medium whitespace-nowrap pr-2">All Categories <i class="dropdown-icon lab-fill-arrow-down text-xl" ></i></button>
@@ -158,7 +146,7 @@
                                 <div class="max-h-80 h-auto thin-scrolling p-4 pr-0">
                                     <div class="flex gap-x-2 pb-3 border-b border-[#EFF0F6] mb-3">
                                         <div class="w-20 h-20 rounded-2xl">
-                                            <img src="../../images/cart/prdt1.png" class="w-full h-full" alt="product1">
+                                            <img src="/images/cart/prdt1.png" class="w-full h-full" alt="product1">
                                         </div>
                                         <div class="text-ellipsis">
                                             <h4 class="whitespace-nowrap text-sm font-medium mb-2">New collection Stylish Comb</h4>
@@ -177,7 +165,7 @@
                                     </div>
                                     <div class="flex gap-x-2 pb-3 border-b border-[#EFF0F6] mb-3">
                                         <div class="w-20 h-20 rounded-2xl">
-                                            <img src="../../images/cart/prdt2.png" class="w-full h-full" alt="product2">
+                                            <img src="/images/cart/prdt2.png" class="w-full h-full" alt="product2">
                                         </div>
                                         <div class="overflow-hidden text-ellipsis">
                                             <h4 class="whitespace-nowrap text-sm font-medium mb-2">New collection Stylish Comb</h4>
@@ -196,7 +184,7 @@
                                     </div>
                                     <div class="flex gap-x-2 pb-3">
                                         <div class="w-20 h-20 rounded-2xl">
-                                            <img src="../../images/cart/prdt2.png" class="w-full h-full" alt="product2">
+                                            <img src="/images/cart/prdt2.png" class="w-full h-full" alt="product2">
                                         </div>
                                         <div class="overflow-hidden text-ellipsis">
                                             <h4 class="whitespace-nowrap text-sm font-medium mb-2">New collection Stylish Comb</h4>
@@ -293,7 +281,21 @@
 </template>
 
 <script>
+import CurrencyPaperComponent from '../../components/client/papers/CurrencyPaperComponent.vue';
+import LanguagePaperComponent from '../../components/client/papers/LanguagePaperComponent.vue';
+
+import {usePaper} from '@/composables/paper'
 export default {
-   
-};
+   components:{
+    CurrencyPaperComponent,
+    LanguagePaperComponent,
+   },
+   setup() {
+    const {handlePaper} = usePaper();
+
+    return {
+        handlePaper
+    }
+}
+}
 </script>
