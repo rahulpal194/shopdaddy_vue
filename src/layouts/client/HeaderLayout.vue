@@ -18,7 +18,7 @@
                             <span id="current-currency" class="whitespace-nowrap"></span>
                             <i class="dropdown-icon lab-line-chevron-down text-xs "></i>
                         </button>
-                        <CurrencyPaperComponent/>
+                        <CurrencyPaperComponent :currencies="CurrencyDropdown" :currentCurrency="currentCurrency"/>
                     </div>
                     <div class="relative ps-8 dropdown-group">
                         <button class="dropdown-btn flex items-center justify-center gap-2 rounded-xl transition h-6" >
@@ -281,20 +281,24 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import CurrencyPaperComponent from '../../components/client/papers/CurrencyPaperComponent.vue';
 import LanguagePaperComponent from '../../components/client/papers/LanguagePaperComponent.vue';
 
 import {usePaper} from '@/composables/paper'
 export default {
-   components:{
+    components:{
     CurrencyPaperComponent,
     LanguagePaperComponent,
    },
    setup() {
     const {handlePaper} = usePaper();
-
+    const CurrencyDropdown = ['Usd', 'Bdt', 'Rs'];
+    const currentCurrency = ref('Usd');  // Default selected currency
     return {
-        handlePaper
+        handlePaper,
+        currentCurrency,
+        CurrencyDropdown
     }
 }
 }
