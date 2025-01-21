@@ -1,0 +1,104 @@
+[
+    {
+      "id": 1,
+      "coverimg": "/images/topShop/Shopcover1.png",
+      "logo":"/images/topShop/Shoplogo1.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 66,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 2,
+      "coverimg": "/images/topShop/Shopcover2.png",
+      "logo":"/images/topShop/Shoplogo2.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 26,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 3,
+      "coverimg": "/images/topShop/Shopcover5.png",
+      "logo":"/images/topShop/Shoplogo5.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 54,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 4,
+      "coverimg": "/images/topShop/Shopcover4.png",
+      "logo":"/images/topShop/Shoplogo4.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 78,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 5,
+      "coverimg": "/images/topShop/Shopcover3.png",
+      "logo":"/images/topShop/Shoplogo3.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 23,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 6,
+      "coverimg": "/images/topShop/Shopcover2.png",
+      "logo":"/images/topShop/Shoplogo2.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 66,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 7,
+      "coverimg": "/images/topShop/Shopcover1.png",
+      "logo":"/images/topShop/Shoplogo1.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 66,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 8,
+      "coverimg": "/images/topShop/Shopcover2.png",
+      "logo":"/images/topShop/Shoplogo2.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 26,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 9,
+      "coverimg": "/images/topShop/Shopcover5.png",
+      "logo":"/images/topShop/Shoplogo5.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 54,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 10,
+      "coverimg": "/images/topShop/Shopcover4.png",
+      "logo":"/images/topShop/Shoplogo4.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 78,
+      "link":"./store-home.html"
+    },
+    {
+      "id": 11,
+      "coverimg": "/images/topShop/Shopcover3.png",
+      "logo":"/images/topShop/Shoplogo3.png",
+      "shopname": "Export Fashion House",
+      "review": 32,
+      "stock": 23,
+      "link":"./store-home.html"
+    }
+    
+    
+  ]
+  

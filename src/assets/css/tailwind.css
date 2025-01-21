@@ -63,8 +63,7 @@ body{@apply font-client text-[#1F1F39]}
   .fa-chevron-down.rotate {transform: rotate(180deg);}
   
   .swiper .active {@apply !bg-primary !text-white shadow-buttonprimary}
-  .blogSwiper .swiper-slide , .brandSwiper .swiper-slide,  .shopSwiper .swiper-slide{@apply !mr-0};
-  .trendySwiper .swiper-slide{@apply !mr-0 !w-fit}
+
   .tabcontent {animation: fadeEffect 1s;}
 
   .swiper-slide { @apply bg-cover bg-center}

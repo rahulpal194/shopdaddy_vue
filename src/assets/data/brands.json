@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "img": "/images/brands/adidas.png"
+    },
+    {
+      "id": 2,
+      "img": "/images/brands/huaweilogo.png"
+    },
+    {
+      "id": 3,
+      "img": "/images/brands/levislogo.png"
+    },
+    {
+      "id": 4,
+      "img": "/images/brands/pumalogo.png"
+    },
+    {
+      "id": 5,
+      "img": "/images/brands/rfllogo.png"
+    },
+    {
+      "id": 6,
+      "img": "/images/brands/zaralogo.png"
+    },
+    {
+        "id": 7,
+        "img": "/images/brands/adidas.png"
+      },
+      {
+        "id": 8,
+        "img": "/images/brands/huaweilogo.png"
+      },
+      {
+        "id": 9,
+        "img": "/images/brands/levislogo.png"
+      },
+      {
+        "id": 10,
+        "img": "/images/brands/pumalogo.png"
+      },
+      {
+        "id": 11,
+        "img": "/images/brands/rfllogo.png"
+      },
+      {
+        "id": 12,
+        "img": "/images/brands/zaralogo.png"
+      }
+  ]

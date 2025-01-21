@@ -2,7 +2,7 @@
 <div class="container">
     <div class="mt-12 mb-14 lg:mb-0 pb-8 lg:pb-0">
         <div class="grid-cols-auto md:hidden block mb-8">
-            <a href="#"><img class="mb-4 w-36" src="../../images/header/logo.png" alt="logo"></a>
+            <a href="#"><img class="mb-4 w-36" src="/images/header/logo.png" alt="logo"></a>
             <p class="text-sm mb-3">Discover the latest trends and enjoy seamless shopping with our exclusive collections.</p>
             <p class="text-sm mb-3 flex items-center gap-2"><i class="lab-line-map-point text-xl"></i> House:25, Road:05, Block:A, Mirpur-2, Dhaka.</p>
             <p class="text-sm mb-3 flex items-center gap-2"><i class="lab-line-letter text-xl"></i>Email: ebazaar@gmail.com</p>
@@ -10,7 +10,7 @@
         </div>
         <div class="grid grid-cols-1 small:grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
             <div class="grid-cols-auto hidden md:block">
-                <a href="#"><img class="mb-4 w-36" src="../../images/header/logo.png" alt="logo"></a>
+                <a href="#"><img class="mb-4 w-36" src="/images/header/logo.png" alt="logo"></a>
                 <p class="text-sm mb-3">Discover the latest trends and enjoy seamless shopping with our exclusive collections.</p>
                 <p class="text-sm mb-3 flex items-center gap-2"><i class="lab-line-map-point text-xl"></i> House:25, Road:05, Block:A, Mirpur-2, Dhaka.</p>
                 <p class="text-sm mb-3 flex items-center gap-2"><i class="lab-line-letter text-xl"></i>Email: ebazaar@gmail.com</p>
@@ -63,7 +63,7 @@
                         </div>
                         <h3 class="capitalize text-lg font-semibold mb-3">Download App</h3>
                         <nav class="flex flex-col items-center gap-3 mb-7 w-full max-w-[130px]">
-                            <a href="#"><img class="rounded-lg w-full" src="../../images/footer/play-store.png" alt="app"></a>
+                            <a href="#"><img class="rounded-lg w-full" src="/images/footer/play-store.png" alt="app"></a>
                             <a href="#"><img class="rounded-lg w-full" src="/images/footer/apple-store.png" alt="app"></a>
                         </nav>
                     </div>

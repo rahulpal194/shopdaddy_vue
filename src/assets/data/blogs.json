@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "coverimg": "/images/blog/blogcover1.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 2,
+      "coverimg": "/images/blog/blogcover2.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date":"28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 3,
+      "coverimg": "/images/blog/blogcover3.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 4,
+      "coverimg": "/images/blog/blogcover4.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 5,
+      "coverimg": "/images/blog/blogcover1.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 6,
+      "coverimg": "/images/blog/blogcover2.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 7,
+      "coverimg": "/images/blog/blogcover3.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 8,
+      "coverimg": "/images/blog/blogcover4.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 9,
+      "coverimg": "/images/blog/blogcover1.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    },
+    {
+      "id": 10,
+      "coverimg": "/images/blog/blogcover2.png",
+      "label": "Hear What Our Customers Have to Say About Their Satisfaction",
+      "date": "28 Aug, 2024",
+      "link":"./client/blog-details/"
+    }
+  ]

@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "img": "/images/todayDeals/product1.png",
+      "productname": "Anne Klein Jeans Women's Glennda Easy Breezy Short Sleev...",
+      "label": "35% Off",
+      "review": 32,
+      "previous_price": 150.00,
+      "new_price": 140.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 2,
+      "img": "/images/todayDeals/product2.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Best Seller",
+      "review": 32,
+      "previous_price": 130.00,
+      "new_price": 125.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 3,
+      "img": "/images/todayDeals/product3.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Sale",
+      "review": 32,
+      "previous_price": 170.00,
+      "new_price": 160.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 4,
+      "img": "/images/todayDeals/product4.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "null",
+      "review": 32,
+      "previous_price": 1100.00,
+      "new_price": 180.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 5,
+      "img": "/images/todayDeals/product5.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Limited Edition",
+      "review": 32,
+      "previous_price": 120.00,
+      "new_price": 100.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 6,
+      "img": "/images/todayDeals/product3.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Sale",
+      "review": 32,
+      "previous_price": 170.00,
+      "new_price": 160.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 7,
+      "img": "/images/todayDeals/product4.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Featured",
+      "review": 32,
+      "previous_price": 1100.00,
+      "new_price": 180.00,
+      "link":"./product-details.html"
+    },
+    {
+      "id": 8,
+      "img": "/images/todayDeals/product5.png",
+      "productname": "New collection Stylish Combo Angelic T-shirt",
+      "label": "Limited Edition",
+      "review": 32,
+      "previous_price": 120.00,
+      "new_price": 100.00,
+      "link":"./product-details.html"
+    }
+  ]
+  
