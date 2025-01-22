@@ -170,7 +170,7 @@
                         </div> 
                     </div>
                     <!-- Product Columns -->
-                    <div v-for="product in products" class="col-span-1 flex flex-col gap-2.5 group">
+                    <div v-for="product in flashSell" class="col-span-1 flex flex-col gap-2.5 group">
                         <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
                             <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
                             <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
@@ -227,7 +227,7 @@
                    </button>
                </div>
                <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-6 sm:gap-x-6">
-                   <div v-for="product in bestSell" class="col-span-1 flex flex-col gap-2.5 group">
+                   <div v-for="product in cloths" class="col-span-1 flex flex-col gap-2.5 group">
                            <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
                                <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
                                <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
@@ -255,51 +255,174 @@
 
         <!--====================================
             TOP RATED SHOP PART START   
-     =====================================-->
-     <section class="container">
-        <div class="md:mb-10 mb-8 lg:mb-20">
-            <div class="flex justify-between items-center mb-6 md:mb-8">
-                 <h3 class="text-2xl md:text-3xl font-bold">
-                    <i class="lab-fill-shop text-primary text-2xl md:text-3xl"></i> Top Rated Shops
-                </h3>
-                <div class="flex justify-center gap-3">
-                    <button class="button-prev w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
-                        <i class="lab-line-chevron-left text-xl"></i>
-                    </button>
-                    <button class="button-next w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
-                        <i class="lab-line-chevron-right text-xl"></i>
-                    </button>
+        =====================================-->
+        <section class="container">
+            <div class="md:mb-10 mb-8 lg:mb-20">
+                <div class="flex justify-between items-center mb-6 md:mb-8">
+                     <h3 class="text-2xl md:text-3xl font-bold">
+                        <i class="lab-fill-shop text-primary text-2xl md:text-3xl"></i> Top Rated Shops
+                    </h3>
+                    <div class="flex justify-center gap-3">
+                        <button @click="shopPrevSlide" class="swiper-prev-btn w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="lab-line-chevron-left text-xl"></i>
+                        </button>
+                        <button @click="shopNextSlide" class="swiper-next-btn w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="lab-line-chevron-right text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <Swiper :loop="true" :speed="1000" :slides-per-view=6 :space-between=16 @swiper="onShopSwiper" ref="shopSwiper" :modules="[Navigation]" class="shopSwiper" >
+                    <SwiperSlide v-for="shop in shops" class="border border-light-white rounded-xl">
+                        <a href="./store-home.html" class="group">
+                            <img :src="shop.coverimg" alt="cover1" class="w-full h-20 rounded-t-xl rounded-[0_0_90%_90%/100%_100%_25%_25%]">
+                            <div class="p-3">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <img :src="shop.logo" alt="logo1" class="w-6 h-6 rounded-full">
+                                    <h3 class="text-sm font-medium line-clamp-1 group-hover:text-primary">{{ shop.shopname }}</h3>
+                                </div>
+                                <span class="text-highlight-red">{{shop.stock}} Products</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center">
+                                        <i class="lab-fill-star text-xs text-warning"></i>
+                                        <i class="lab-fill-star text-xs text-warning"></i>
+                                        <i class="lab-fill-star text-xs text-warning"></i>
+                                        <i class="lab-fill-star text-xs text-warning"></i>
+                                        <i class="lab-fill-star text-xs text-light-white"></i>
+                                    </div>
+                                    <span class="text-xs font-medium text-light-white">{{shop.review}}Reviews</span>
+                                </div>
+                            </div>
+                        </a>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </section>
+        <!--====================================
+           TOP RATED SHOP PART END   
+        =====================================-->
+
+        <!--====================================
+           LOWER BANNER PART START   
+        =====================================-->
+        <section class="container">
+            <div class="mb-8 md:mb-10 lg:mb-20">
+                <div class="grid grid-cols-2 gap-4 sm:gap-6 ">
+                  <a href="#" class="col-span-full md:col-span-1 w-full h-44 ">
+                    <img src="/images/lowerbanner/banner1.png" alt="banner1" class="rounded-2xl h-full w-full">
+                  </a> 
+                  <a href="#" class="col-span-full md:col-span-1 w-full h-44 ">
+                    <img src="/images/lowerbanner/banner2.png" alt="banner2" class="rounded-2xl h-full w-full">
+                  </a>
                 </div>
             </div>
-            <Swiper :speed="1000" :slides-per-view=6  :space-between=16 class="shopSwiper">
-                <SwiperSlide v-for="shop in shops" class="border border-light-white rounded-xl">
-                    <a href="./store-home.html" class="group">
-                        <img :src="shop.coverimg" alt="cover1" class="w-full h-20 rounded-t-xl rounded-[0_0_90%_90%/100%_100%_25%_25%]">
-                        <div class="p-3">
-                            <div class="flex items-center gap-2 mb-3">
-                                <img :src="shop.logo" alt="logo1" class="w-6 h-6 rounded-full">
-                                <h3 class="text-sm font-medium line-clamp-1 group-hover:text-primary">{{ shop.shopname }}</h3>
-                            </div>
-                            <span class="text-highlight-red">{{shop.stock}} Products</span>
-                            <div class="flex items-center gap-2">
-                                <div class="flex items-center">
-                                    <i class="lab-fill-star text-xs text-warning"></i>
-                                    <i class="lab-fill-star text-xs text-warning"></i>
-                                    <i class="lab-fill-star text-xs text-warning"></i>
-                                    <i class="lab-fill-star text-xs text-warning"></i>
-                                    <i class="lab-fill-star text-xs text-light-white"></i>
-                                </div>
-                                <span class="text-xs font-medium text-light-white">{{shop.review}}Reviews</span>
-                            </div>
+        </section>
+        <!--====================================
+            LOWER BANNER PART END   
+        =====================================-->
+        
+        <!--====================================
+            TRENDY PRODUCT PART START   
+        =====================================-->
+        <section class="container">
+            <div class="md:mb-10 mb-8 lg:mb-20">
+                <h3 class="text-xl small:text-2xl md:text-3xl font-bold mb-6">
+                    <i class="lab-fill-essential-box text-primary text-xl small:text-2xl md:text-3xl"></i> Trendy Products by Categories
+                </h3>
+                <nav class="pb-4 border-b">
+                    <Swiper :speed="1000" :slides-per-view="auto"  :space-between=16 class="trendySwiper flex tab">
+                        <SwiperSlide class="!w-fit"><li class="active db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap" data-target="#cloth">Clothing & Fashion</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap" data-target="#computer">Computer & Accessories</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Smartphone & Gadgets</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Electronics</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Beauty & Personal Care</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Sports & Entertainment</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Home & Living</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Jewelry & Watches</li></SwiperSlide>
+                        <SwiperSlide class="!w-fit"><li class="db-tab-btn swiper-slide px-4 py-[10px] rounded-xl  hover:shadow-buttonprimary  hover:bg-primary text-center hover:text-white transition-all duration-300 cursor-pointer text-base md:text-xl font-medium  text-nowrap">Kids & Toy</li></SwiperSlide>
+                    </Swiper>
+                </nav>
+                <div class="category">
+                <div class="db-tab-div mt-4 active" id="cloth">
+                    <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  grid-flow-dense gap-x-4 gap-y-6 sm:gap-x-6">
+                        <div v-for="product in cloths" class="col-span-1 flex flex-col gap-2.5 group">
+                           <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
+                               <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
+                               <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
+                               <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
+                           </div>
+                           <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
+                           <div class="flex items-center gap-2">
+                               <div class="flex items-center">
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-light-white"></i>
+                               </div>
+                               <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
+                           </div>
+                           <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
                         </div>
-                    </a>
-                </SwiperSlide>
-            </Swiper>
-        </div>
-     </section>
-    <!--====================================
-           TOP RATED SHOP PART END   
-    =====================================-->
+                    </div>
+                </div>
+                <div class="db-tab-div mt-4 " id="computer" >
+                    <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  grid-flow-dense gap-x-4 gap-y-6 sm:gap-x-6">
+                        <div v-for="product in computer" class="col-span-1 flex flex-col gap-2.5 group">
+                           <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
+                               <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
+                               <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
+                               <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
+                           </div>
+                           <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
+                           <div class="flex items-center gap-2">
+                               <div class="flex items-center">
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-warning"></i>
+                                   <i class="lab-fill-star text-xs text-light-white"></i>
+                               </div>
+                               <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
+                           </div>
+                           <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--====================================
+           TRENDY PRODUCT PART START   
+        =====================================-->
+
+        <!--====================================
+           TOP BRANDS PART START   
+        =====================================-->
+        <section class="container">
+            <div class="swiper brandSwiper md:mb-10 mb-8 lg:mb-20">
+                <div class="flex justify-between mb-6 md:mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold">
+                        <i class="lab-fill-medal-ribbons text-primary text-2xl md:text-3xl"></i> Top Brands
+                    </h3>
+                    <div class="flex gap-3">
+                        <button @click="brandPrevSlide" class="button-prev w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="lab-line-chevron-left text-xl"></i>
+                        </button>
+                        <button @click="brandNextSlide" class="button-next w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="lab-line-chevron-right text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <Swiper :speed="1000" :slides-per-view="6"  :space-between=16 @swiper="onBrandSwiper" ref="brandSwiper" class="flex gap-4 sm:gap-6 flex-nowrap">
+                    <SwiperSlide v-for="brand in brands" class="border border-light-white rounded-xl !flex justify-center items-center !h-24">
+                        <img :src="brand.img" alt="">
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </section>
+        <!--====================================
+            TOP BRANDS PART END   
+        =====================================-->
 
     </ClientLayout>
 </template>
@@ -309,34 +432,83 @@
 import ClientLayout from '@/layouts/client/ClientLayout.vue';
 import productsData from '@/assets/data/products.json'
 import shopData from '@/assets/data/shops.json'
-import {Swiper, SwiperSlide } from 'swiper/vue';
+import brandsData from '@/assets/data/brands.json'
+import {Swiper, SwiperSlide} from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
+import { ref } from 'vue';
+import { Navigation } from 'swiper/modules';
 
 export default {
-    components: {
+    methods: {
+        Navigation() {
+            return Navigation
+        }
+    },
+    components:{
     ClientLayout,
     Swiper, SwiperSlide
     },
     data(){
         return {
             products : productsData,
-            shops : shopData
+            shops : shopData,
+            brands : brandsData,
+            cloths :[],
+            computer :[],
         }
     },
     computed:{
         todayDeals(){
-            return this.products.slice(0,5)
+            return this.cloths.slice(0,5)
         },
         bestSell(){
-            return this.products.slice(0,5)
+            return this.cloths.slice(0,5)
         },
-        navigation() {
-            return {
-              prevEl: this.$refs.prevBtn,  // Reference to the previous button
-              nextEl: this.$refs.nextBtn,  // Reference to the next button
-      };
+        flashSell(){
+            return this.cloths.slice(0,8)
+        }, 
     },
+    mounted(){
+        for (let i = 0; i < this.products.length; i++) {
+            const product = this.products[i];
+            if(product.category=="cloth"){
+                this.cloths.push(product);
+            }
+            else if(product.category == "computer"){
+                this.computer.push(product)
+            }
+        }
     },
+    setup() {
+        const shopswiperInstance = ref()
+        const brandswiperInstance = ref()
+        function onShopSwiper(swiper) {
+            shopswiperInstance.value = swiper
+        }
+        function onBrandSwiper(swiper) {
+            brandswiperInstance.value = swiper
+        }
+        const shopNextSlide = () => {
+            shopswiperInstance.value.slideNext()
+        };
+        const shopPrevSlide = () => {
+            shopswiperInstance.value.slidePrev()
+        };
+        const brandNextSlide = () => {
+            brandswiperInstance.value.slideNext()
+        };
+        const brandPrevSlide = () => {
+            brandswiperInstance.value.slidePrev()
+        };
+        return {
+            shopPrevSlide,
+            shopNextSlide,
+            brandPrevSlide,
+            brandNextSlide,
+            onShopSwiper,
+            onBrandSwiper,
+    };
+},
 }
 
 </script>

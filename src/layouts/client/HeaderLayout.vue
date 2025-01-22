@@ -18,7 +18,6 @@
                             <span id="current-currency" class="whitespace-nowrap"></span>
                             <i class="dropdown-icon lab-line-chevron-down text-xs "></i>
                         </button>
-                        <CurrencyPaperComponent :currencies="CurrencyDropdown" :currentCurrency="currentCurrency"/>
                     </div>
                     <div class="relative ps-8 dropdown-group">
                         <button class="dropdown-btn flex items-center justify-center gap-2 rounded-xl transition h-6" >
@@ -26,7 +25,6 @@
                             <span id="current-lang" class="whitespace-nowrap">English</span>
                             <i class="dropdown-icon lab-line-chevron-down text-xs"></i>
                         </button>
-                        <LanguagePaperComponent/>
                     </div>
                 </div>
              </div>
@@ -86,7 +84,7 @@
                 <div class="hidden lg:flex gap-6 items-center">
                     <div class="relative dropdown-group">
                         <button class="dropdown-btn flex flex-shrink gap-x-2 items-center group">
-                            <i class="lab-line-administrator border rounded-full w-11 h-11 flex items-center justify-center text-xl group-hover:bg-primary-light transition-all duration-300"></i>
+                            <i class="lab-line-administrator border rounded-full w-11 h-11 !flex items-center justify-center text-xl group-hover:bg-primary-light transition-all duration-300"></i>
                             <span>
                                 <small class="text-xs font-normal">Login/Signup</small>
                                 <p class="text-sm font-medium whitespace-nowrap">My Account</p>
@@ -281,25 +279,8 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import CurrencyPaperComponent from '../../components/client/papers/CurrencyPaperComponent.vue';
-import LanguagePaperComponent from '../../components/client/papers/LanguagePaperComponent.vue';
 
-import {usePaper} from '@/composables/paper'
 export default {
-    components:{
-    CurrencyPaperComponent,
-    LanguagePaperComponent,
-   },
-   setup() {
-    const {handlePaper} = usePaper();
-    const CurrencyDropdown = ['Usd', 'Bdt', 'Rs'];
-    const currentCurrency = ref('Usd');  // Default selected currency
-    return {
-        handlePaper,
-        currentCurrency,
-        CurrencyDropdown
-    }
-}
+
 }
 </script>
