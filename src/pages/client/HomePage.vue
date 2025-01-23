@@ -424,6 +424,44 @@
             TOP BRANDS PART END   
         =====================================-->
 
+         <!--====================================
+                  BLOGS PART START   
+        =====================================-->
+        <section class="container">
+           <div class="md:mb-10 mb-8 lg:mb-20">
+               <div class="swiper blogSwiper">
+                   <div class="flex justify-between mb-6 md:mb-8">
+                       <h3 class="text-2xl md:text-3xl font-bold">
+                           <i class="lab-fill-notes text-primary text-2xl md:text-3xl"></i> Latest Blog
+                       </h3>
+                       <div class="flex gap-3">
+                           <button @click="blogPrevSlide" class="swiper-button w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                               <i class="lab-line-chevron-left text-xl"></i>
+                           </button>
+                           <button @click="blogNextSlide" class="swiper-button w-9 h-9 rounded-full flex justify-center items-center text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">
+                               <i class="lab-line-chevron-right text-xl"></i>
+                           </button>
+                       </div>
+                   </div>
+                   <Swiper :speed="1000" :slides-per-view="4"  :space-between=16 @swiper="onBlogSwiper" ref="blogSwiper" class="flex gap-4 sm:gap-6">
+                       <SwiperSlide v-for="blog in blogs" class="border border-light-white rounded-xl">
+                            <a href="./blog_details.html" class="group">
+                               <img :src="blog.coverimg" alt="cover1" class="w-full h-36 rounded-t-xl">
+                               <div class="p-4">
+                                   <span class="text-xs font-medium text-[#6E7191] flex items-center mb-2"><i class="lab-line-calendar text-base text-primary mr-2"></i>{{ blog.date }}</span>
+                                   <h6 class="t6ext-base font-medium line-clamp-2 mb-4 group-hover:text-primary">{{ blog.label }}</h6>
+                                   <a href="./blog_details.html" class="text-sm font-bold text-primary">Read More</a>
+                               </div>
+                            </a>
+                        </SwiperSlide>
+                   </Swiper>
+               </div>
+           </div>
+        </section>
+        <!--====================================
+                   BLOGS PART END   
+        =====================================-->
+
     </ClientLayout>
 </template>
 
@@ -433,6 +471,7 @@ import ClientLayout from '@/layouts/client/ClientLayout.vue';
 import productsData from '@/assets/data/products.json'
 import shopData from '@/assets/data/shops.json'
 import brandsData from '@/assets/data/brands.json'
+import blogsData from '@/assets/data/blogs.json'
 import {Swiper, SwiperSlide} from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 import { ref } from 'vue';
@@ -453,6 +492,7 @@ export default {
             products : productsData,
             shops : shopData,
             brands : brandsData,
+            blogs : blogsData,
             cloths :[],
             computer :[],
         }
@@ -482,11 +522,16 @@ export default {
     setup() {
         const shopswiperInstance = ref()
         const brandswiperInstance = ref()
+        const blogswiperInstance = ref()
+        
         function onShopSwiper(swiper) {
             shopswiperInstance.value = swiper
         }
         function onBrandSwiper(swiper) {
             brandswiperInstance.value = swiper
+        }
+        function onBlogSwiper(swiper) {
+            blogswiperInstance.value = swiper
         }
         const shopNextSlide = () => {
             shopswiperInstance.value.slideNext()
@@ -500,6 +545,12 @@ export default {
         const brandPrevSlide = () => {
             brandswiperInstance.value.slidePrev()
         };
+        const blogNextSlide = () => {
+            brandswiperInstance.value.slideNext()
+        };
+        const blogPrevSlide = () => {
+            brandswiperInstance.value.slidePrev()
+        };
         return {
             shopPrevSlide,
             shopNextSlide,
@@ -507,7 +558,10 @@ export default {
             brandNextSlide,
             onShopSwiper,
             onBrandSwiper,
-    };
+            onBlogSwiper,
+            blogNextSlide,
+            blogPrevSlide
+       };
 },
 }
 
