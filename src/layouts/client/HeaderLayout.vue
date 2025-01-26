@@ -53,7 +53,7 @@
             </div>
             <!-- Search and User Info -->
             <div class="middle_nav flex items-center justify-between lg:justify-normal gap-x-[68px] lg:pb-4 lg:border-b transition-all duration-300">
-               <button data-drawer="#sidebar" class=" block lg:hidden">
+               <button data-drawer="#sidebar" class="block lg:hidden">
                     <i class="lab-line-dashboard text-2xl "></i>
                </button> 
                 <a href="./home.html" class="max-w-36 flex-shrink-0">
@@ -280,7 +280,9 @@
 
 <script>
 
-export default {
 
+
+export default {
+   
 }
 </script>

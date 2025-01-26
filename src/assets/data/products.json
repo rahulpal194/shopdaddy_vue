@@ -1,6 +1,7 @@
 [
     {
       "id": 1,
+      "isFavourite": true,
       "category":"cloth",
       "img": "/images/todayDeals/product1.png",
       "productname": "Anne Klein Jeans Women's Glennda Easy Breezy Short Sleev...",
@@ -12,6 +13,7 @@
     },
     {
       "id": 2,
+      "isFavourite":  false,    
       "category":"e-device",
       "img": "/images/todayDeals/product2.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -23,6 +25,7 @@
     },
     {
       "id": 3,
+      "isFavourite": true,       
       "category":"computer",
       "img": "/images/todayDeals/product3.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -34,6 +37,7 @@
     },
     {
       "id": 4,
+      "isFavourite": false,    
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -45,6 +49,7 @@
     },
     {
       "id": 5,
+      "isFavourite": true,    
       "category":"computer",
       "img": "/images/todayDeals/product5.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -56,6 +61,7 @@
     },
     {
       "id": 6,
+      "isFavourite":false,      
       "category":"computer",
       "img": "/images/todayDeals/product3.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -66,7 +72,8 @@
       "link":"./product-details.html"
     },
     {
-      "id": 7,
+      "id": 7, 
+      "isFavourite": true,    
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -78,6 +85,7 @@
     },
     {
       "id": 8,
+      "isFavourite": false,     
       "category":"computer",
       "img": "/images/todayDeals/product5.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -89,6 +97,7 @@
     },
     {
       "id": 9,
+      "isFavourite": true,     
       "category":"computer",
       "img": "/images/todayDeals/product5.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -100,6 +109,7 @@
     },
     {
       "id": 10,
+      "isFavourite":true,
       "category":"computer",
       "img": "/images/todayDeals/product3.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -111,6 +121,7 @@
     },
     {
       "id": 11,
+      "isFavourite":false,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -122,6 +133,7 @@
     },
     {
       "id": 12,
+      "isFavourite":true,
       "category":"computer",
       "img": "/images/todayDeals/product5.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -133,6 +145,7 @@
     },
     {
       "id": 13,
+      "isFavourite":false,
       "category":"cloth",
       "img": "/images/todayDeals/product1.png",
       "productname": "Anne Klein Jeans Women's Glennda Easy Breezy Short Sleev...",
@@ -144,6 +157,7 @@
     },
     {
       "id": 14,
+      "isFavourite":true,
       "category":"e-device",
       "img": "/images/todayDeals/product2.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -155,6 +169,7 @@
     },
     {
       "id": 15,
+      "isFavourite":false,
       "category":"computer",
       "img": "/images/todayDeals/product3.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -166,6 +181,7 @@
     },
     {
       "id": 16,
+      "isFavourite":true,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -177,6 +193,7 @@
     },
     {
       "id": 17,
+      "isFavourite":true,
       "category":"computer",
       "img": "/images/todayDeals/product5.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -188,6 +205,7 @@
     },
     {
       "id": 18,
+      "isFavourite":false,
       "category":"computer",
       "img": "/images/todayDeals/product3.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -199,6 +217,7 @@
     },
     {
       "id": 19,
+      "isFavourite":false,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -210,6 +229,7 @@
     },
     {
       "id": 20,
+      "isFavourite":true,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -221,6 +241,7 @@
     },
     {
       "id": 21,
+      "isFavourite":true,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",
@@ -232,6 +253,7 @@
     },
     {
       "id": 22,
+      "isFavourite":true,
       "category":"cloth",
       "img": "/images/todayDeals/product4.png",
       "productname": "New collection Stylish Combo Angelic T-shirt",

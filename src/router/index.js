@@ -17,6 +17,24 @@ const router = createRouter({
 				requiresAuth: false
 			}
 		},
+        {
+			path: '/products',
+			name: 'products',
+			component: () => import('@/pages/client/ProductList.vue'),
+			meta: {
+				title: "Products",
+				requiresAuth: false
+			}
+		},
+		{
+			path: '/product/:id', // Dynamic route for product detail page
+            name: 'ProductDetail',
+            component: ()=> import('@/pages/client/ProductDetails.vue'),
+            props: true,
+			meta:{
+				title:"Product Details"
+			}
+		}
   ],
 })
 router.beforeEach((to, from, next) => {
