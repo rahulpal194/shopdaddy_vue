@@ -27,7 +27,7 @@ const router = createRouter({
 			}
 		},
 		{
-			path: '/product/:id', // Dynamic route for product detail page
+			path: '/product/:id',
             name: 'ProductDetail',
             component: ()=> import('@/pages/client/ProductDetails.vue'),
             props: true,

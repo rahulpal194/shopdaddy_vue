@@ -381,7 +381,7 @@
                 <!-- Product Columns -->
                  <div class="lg:col-10 col-12 ">
                     <div class="grid grid-cols-2 small:grid-cols-3 md:grid-cols-4 grid-flow-row-dense gap-x-4 gap-y-6 md:gap-x-6 border-b border-light-white pb-6 mb-6">
-                        <RouterLink :to="{name: 'ProductDetail', params: { id: product.id }}" v-for="product in products" class="grid-cols-1 flex flex-col gap-2.5">
+                        <RouterLink :to="{name:'ProductDetail', params:{id:product.id}}" v-for="product in products" class="grid-cols-1 flex flex-col gap-2.5">
                             <div class="max-h-56 max-w-56 rounded-2xl relative"> 
                                <img :src="product.img" alt="Product 1" class="aspect-square rounded-2xl">
                                <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">35% Off</label>
@@ -390,7 +390,7 @@
                                     <i v-else class="lab-line-heart-round text-black"></i>
                                 </button>
                             </div>
-                             <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class="hover:text-primary">{{ product.productname }}</a></h3>
+                             <h3 class="text-sm font-medium line-clamp-2 hover:text-primary">{{ product.productname }}</h3>
                             <div class="flex items-center gap-2">
                                 <div class="flex items-center">
                                     <i class="lab-fill-star text-xs text-warning"></i>
@@ -441,6 +441,7 @@
 import ClientLayout from '@/layouts/client/ClientLayout.vue';
 import productsData from '@/assets/data/products.json'
 import { RouterLink } from 'vue-router';
+import ProductDetails from './ProductDetails.vue';
    export default{
     components:{
         ClientLayout,
