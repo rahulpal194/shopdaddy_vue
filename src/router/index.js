@@ -27,10 +27,19 @@ const router = createRouter({
 			}
 		},
 		{
+			path: '/store',
+			name: 'store',
+			component: () => import('@/pages/client/StoreHome.vue'),
+			meta: {
+				title: "Store Home",
+				requiresAuth: false
+			}
+		},
+		{
 			path: '/product/:id',
             name: 'ProductDetail',
             component: ()=> import('@/pages/client/ProductDetails.vue'),
-            props: true,
+			props:true,
 			meta:{
 				title:"Product Details"
 			}

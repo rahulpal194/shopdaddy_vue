@@ -1,8 +1,10 @@
 <template>
-    <h1>product Details Page {{ id }}</h1>
+    <h1>product Details Page {{ id}}</h1>
 </template>
 <script>
     export default{
-        props: ['id']
+        props: {
+            id:String,
+        },
     }
 </script>
