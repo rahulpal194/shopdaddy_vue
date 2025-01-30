@@ -3,8 +3,6 @@
 </template>
 <script>
     export default{
-        props: {
-            id:String,
-        },
+        props: ['id']
     }
 </script>

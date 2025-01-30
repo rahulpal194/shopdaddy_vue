@@ -70,25 +70,7 @@
                     <button class="px-4 py-2 text-sm sm:text-base font-bold rounded-lg text-primary bg-[#F3F5FF] hover:bg-primary hover:text-white transition-all duration-300">View All</button>
                 </div>
                 <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:grid-flow-row gap-y-6 gap-x-4 sm:gap-x-6">
-                    <div v-for="product in todayDeals" class="col-span-1 flex flex-col gap-2.5 group">
-                        <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
-                            <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
-                            <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
-                            <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
-                        </div>
-                        <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center">
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-light-white"></i>
-                            </div>
-                            <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
-                        </div>
-                        <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
-                    </div>
+                    <ProductComponent v-for="product in todayDeals" :product="product"></ProductComponent>
                 </div>
             </div>
         </section>
@@ -170,25 +152,7 @@
                         </div> 
                     </div>
                     <!-- Product Columns -->
-                    <div v-for="product in flashSell" class="col-span-1 flex flex-col gap-2.5 group">
-                        <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
-                            <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
-                            <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
-                            <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
-                        </div>
-                        <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center">
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-warning"></i>
-                                <i class="lab-fill-star text-xs text-light-white"></i>
-                            </div>
-                            <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
-                        </div>
-                        <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
-                    </div>
+                        <ProductComponent v-for="product in flashSell" :product="product"></ProductComponent>
                 </div>
             </div>
         </section>
@@ -227,25 +191,7 @@
                    </button>
                </div>
                <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-6 sm:gap-x-6">
-                   <div v-for="product in cloths" class="col-span-1 flex flex-col gap-2.5 group">
-                           <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
-                               <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
-                               <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
-                               <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
-                           </div>
-                           <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
-                           <div class="flex items-center gap-2">
-                               <div class="flex items-center">
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-light-white"></i>
-                               </div>
-                               <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
-                           </div>
-                           <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
-                   </div>
+                    <ProductComponent v-for="product in cloths" :product="product"></ProductComponent>
                </div>
              </div>
         </section>
@@ -271,28 +217,14 @@
                         </button>
                     </div>
                 </div>
-                <Swiper :loop="true" :speed="1000" :slides-per-view=6 :space-between=16 @swiper="onShopSwiper" ref="shopSwiper" :modules="[Navigation]" class="shopSwiper" >
+                <Swiper :breakpoints="{
+                        '0': { slidesPerView: 2, spaceBetween: 16 },
+                        '640': { slidesPerView: 3, spaceBetween: 24 },
+                        '768': { slidesPerView: 4, spaceBetween: 24 },
+                        '1024': { slidesPerView: 6, spaceBetween: 24 },
+                    }" :loop="true" :speed="1000" :slides-per-view=6 :space-between=16 @swiper="onShopSwiper" ref="shopSwiper" :modules="[Navigation]" class="shopSwiper" >
                     <SwiperSlide v-for="shop in shops" class="border border-light-white rounded-xl">
-                        <a href="./store-home.html" class="group">
-                            <img :src="shop.coverimg" alt="cover1" class="w-full h-20 rounded-t-xl rounded-[0_0_90%_90%/100%_100%_25%_25%]">
-                            <div class="p-3">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <img :src="shop.logo" alt="logo1" class="w-6 h-6 rounded-full">
-                                    <h3 class="text-sm font-medium line-clamp-1 group-hover:text-primary">{{ shop.shopname }}</h3>
-                                </div>
-                                <span class="text-highlight-red">{{shop.stock}} Products</span>
-                                <div class="flex items-center gap-2">
-                                    <div class="flex items-center">
-                                        <i class="lab-fill-star text-xs text-warning"></i>
-                                        <i class="lab-fill-star text-xs text-warning"></i>
-                                        <i class="lab-fill-star text-xs text-warning"></i>
-                                        <i class="lab-fill-star text-xs text-warning"></i>
-                                        <i class="lab-fill-star text-xs text-light-white"></i>
-                                    </div>
-                                    <span class="text-xs font-medium text-light-white">{{shop.review}}Reviews</span>
-                                </div>
-                            </div>
-                        </a>
+                        <ShopComponent :shop="shop"></ShopComponent>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -344,48 +276,12 @@
                 <div class="category">
                 <div class="db-tab-div mt-4 active" id="cloth">
                     <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  grid-flow-dense gap-x-4 gap-y-6 sm:gap-x-6">
-                        <div v-for="product in cloths" class="col-span-1 flex flex-col gap-2.5 group">
-                           <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
-                               <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
-                               <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
-                               <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
-                           </div>
-                           <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
-                           <div class="flex items-center gap-2">
-                               <div class="flex items-center">
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-light-white"></i>
-                               </div>
-                               <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
-                           </div>
-                           <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
-                        </div>
+                        <ProductComponent v-for="product in cloths" :product="product"></ProductComponent>
                     </div>
                 </div>
                 <div class="db-tab-div mt-4 " id="computer" >
                     <div class="grid grid-cols-2 small:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  grid-flow-dense gap-x-4 gap-y-6 sm:gap-x-6">
-                        <div v-for="product in computer" class="col-span-1 flex flex-col gap-2.5 group">
-                           <div class="max-h-56 max-w-56 rounded-2xl aspect-square relative overflow-hidden">
-                               <a href="./product-details.html"><img :src="product.img" alt="product1" class="rounded-2xl aspect-square group-hover:rotate-6 group-hover:scale-125 transition-all duration-500"></a>
-                               <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">{{ product.label }}</label>
-                               <button class="fabourite absolute top-3 right-3 w-7 h-7 z-10 rounded-full bg-white flex justify-center items-center shadow-favourite"><i class="lab-line-heart-round"></i></button>
-                           </div>
-                           <h3 class="text-sm font-medium line-clamp-2"><a href="./product-details.html" class=" hover:text-primary">{{ product.productname }}</a></h3>
-                           <div class="flex items-center gap-2">
-                               <div class="flex items-center">
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-warning"></i>
-                                   <i class="lab-fill-star text-xs text-light-white"></i>
-                               </div>
-                               <span class="text-xs font-medium text-light-white">{{ product.review }} Reviews</span>
-                           </div>
-                           <p class="text-xl font-bold text-primary">${{ product.new_price }} <span class="text-base font-medium text-negative-red line-through">${{product.previous_price}}</span></p>
-                        </div>
+                        <ProductComponent v-for="product in computer" :product="product"></ProductComponent>
                     </div>
                 </div>
             </div>
@@ -413,7 +309,12 @@
                         </button>
                     </div>
                 </div>
-                <Swiper :speed="1000" :slides-per-view="6"  :space-between=16 @swiper="onBrandSwiper" ref="brandSwiper" class="flex gap-4 sm:gap-6 flex-nowrap">
+                <Swiper :breakpoints="{
+                        '0': { slidesPerView: 2, spaceBetween: 16 },
+                        '640': { slidesPerView: 3, spaceBetween: 24 },
+                        '768': { slidesPerView: 4, spaceBetween: 24 },
+                        '1024': { slidesPerView: 6, spaceBetween: 24 },
+                    }" :speed="1000" :slides-per-view="6"  :space-between=16 @swiper="onBrandSwiper" ref="brandSwiper" class="flex gap-4 sm:gap-6 flex-nowrap">
                     <SwiperSlide v-for="brand in brands" class="border border-light-white rounded-xl !flex justify-center items-center !h-24">
                         <img :src="brand.img" alt="">
                     </SwiperSlide>
@@ -443,16 +344,14 @@
                            </button>
                        </div>
                    </div>
-                   <Swiper :speed="1000" :slides-per-view="4"  :space-between=16 @swiper="onBlogSwiper" ref="blogSwiper" class="flex gap-4 sm:gap-6">
+                   <Swiper :breakpoints="{
+                        '0': { slidesPerView: 2, spaceBetween: 16 },
+                        '640': { slidesPerView: 2, spaceBetween: 24 },
+                        '768': { slidesPerView: 3, spaceBetween: 24 },
+                        '1024': { slidesPerView: 4, spaceBetween: 24 },
+                    }" :speed="1000" :slides-per-view="4"  :space-between=16 @swiper="onBlogSwiper" ref="blogSwiper" class="flex gap-4 sm:gap-6">
                        <SwiperSlide v-for="blog in blogs" class="border border-light-white rounded-xl">
-                            <a href="./blog_details.html" class="group">
-                               <img :src="blog.coverimg" alt="cover1" class="w-full h-36 rounded-t-xl">
-                               <div class="p-4">
-                                   <span class="text-xs font-medium text-[#6E7191] flex items-center mb-2"><i class="lab-line-calendar text-base text-primary mr-2"></i>{{ blog.date }}</span>
-                                   <h6 class="t6ext-base font-medium line-clamp-2 mb-4 group-hover:text-primary">{{ blog.label }}</h6>
-                                   <a href="./blog_details.html" class="text-sm font-bold text-primary">Read More</a>
-                               </div>
-                            </a>
+                            <BlogComponent :blog="blog"></BlogComponent>
                         </SwiperSlide>
                    </Swiper>
                </div>
@@ -476,6 +375,10 @@ import {Swiper, SwiperSlide} from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 import { ref } from 'vue';
 import { Navigation } from 'swiper/modules';
+import ProductComponent from '../../components/client/component/ProductComponent.vue';
+import ShopComponent from '../../components/client/component/ShopComponent.vue';
+import BlogComponent from '../../components/client/component/BlogComponent.vue';
+
 
 export default {
     methods: {
@@ -484,7 +387,7 @@ export default {
         }
     },
     components:{
-    ClientLayout,
+    ClientLayout,ProductComponent,ShopComponent,BlogComponent,
     Swiper, SwiperSlide
     },
     data(){
