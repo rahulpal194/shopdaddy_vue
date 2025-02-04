@@ -378,6 +378,7 @@ import { Navigation } from 'swiper/modules';
 import ProductComponent from '../../components/client/component/ProductComponent.vue';
 import ShopComponent from '../../components/client/component/ShopComponent.vue';
 import BlogComponent from '../../components/client/component/BlogComponent.vue';
+import { mapState } from 'pinia';
 
 
 export default {
@@ -409,7 +410,7 @@ export default {
         },
         flashSell(){
             return this.cloths.slice(0,8)
-        }, 
+        },
     },
     mounted(){
         for (let i = 0; i < this.products.length; i++) {

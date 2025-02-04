@@ -11,20 +11,28 @@
                         <li><a href="#" class="flex items-center"><i class="lab-line-call-calling text-base mr-2"></i>+98563214589</a></li>
                     </ul>  
                 </nav>
-                <div class="flex">
-                    <div class="relative dropdown-group">
-                        <button type="button" @click.prevent="handlePaper" class="dropdown-btn flex items-center justify-center  gap-2 rounded-xl ">
-                            <i class="lab-line-currencies text-base"></i>
-                            <span id="current-currency" class="whitespace-nowrap"></span>
-                            <i class="dropdown-icon lab-line-chevron-down text-xs "></i>
+                <div class="flex gap-4">
+                    <div class="relative group hidden lg:block">
+                        <button type="button" class="flex items-center gap-2 py-5 down-arrow">
+                            <span class="font-semibold capitalize">{{ currencys.init.name }}</span>
                         </button>
+                        <ul class="w-40 absolute top-10 ltr:right-0 rtl:left-0 shadow-paper rounded-lg z-10 p-2 bg-white transition-all duration-300 origin-top scale-y-0 group-hover:scale-y-100">
+                            <li v-for="(currency, index) in currencys.data" :key="index" @click="changeCurrency(currency)" class="flex items-center gap-3 px-2 py-1.5 rounded-lg relative w-full cursor-pointer transition-all duration-300 hover:bg-slate-100">
+                                <span class="text-sm font-medium capitalize flex-auto">{{ currency.name }}</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="relative ps-8 dropdown-group">
-                        <button class="dropdown-btn flex items-center justify-center gap-2 rounded-xl transition h-6" >
-                            <img id="current-flag" src="/images/flag/united-states.png" alt="Current Flag"  class="w-4 h-4 rounded-full"> 
-                            <span id="current-lang" class="whitespace-nowrap">English</span>
-                            <i class="dropdown-icon lab-line-chevron-down text-xs"></i>
+                    <div class="relative group hidden lg:block">
+                        <button type="button" class="flex items-center gap-2 py-5 down-arrow">
+                            <img :src="languages.init.flag" alt="flags" class="w-4 h-4 rounded-full" >
+                            <span class="font-semibold capitalize">{{ languages.init.name }}</span>
                         </button>
+                        <ul class="w-40 absolute top-10 ltr:right-0 rtl:left-0 shadow-paper rounded-lg z-10 p-2 bg-white transition-all duration-300 origin-top scale-y-0 group-hover:scale-y-100">
+                            <li v-for="(language, index) in languages.data" :key="index" @click="changeLanguage(language)" class="flex items-center gap-3 px-2 py-1.5 rounded-lg relative w-full cursor-pointer transition-all duration-300 hover:bg-slate-100">
+                                <img :src="language.flag" alt="flags" class="w-4 flex-shrink-0" />
+                                <span class="text-sm font-medium capitalize flex-auto">{{ language.name }}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
              </div>
@@ -279,10 +287,22 @@
 </template>
 
 <script>
-
-
+import { mapActions, mapState } from 'pinia';
+import { useLanguageStore } from '../../stores/languages';
+import { useCurrencyStore } from '../../stores/currency';
 
 export default {
-   
+   computed:{
+    ...mapState(useLanguageStore, ['languages']),
+    ...mapState(useCurrencyStore, ['currencys'])
+   },
+   methods:{
+    ...mapActions(useLanguageStore, ["defaultLanguage", "changeLanguage"]),
+    ...mapActions(useCurrencyStore, ["defaultCurrency", "changeCurrency"]),
+   },
+   mounted() {
+        this.defaultLanguage();
+        this.defaultCurrency()
+    }
 }
 </script>

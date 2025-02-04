@@ -1,8 +1,5 @@
 <template>
     <RouterLink :to="{name:'ProductDetail', params:{id:product.id}}" @click="handleDetails(product)" class="grid-cols-1 flex flex-col gap-2.5">
-        <ProductDetails>
-            
-        </ProductDetails>
         <div class="max-h-56 max-w-56 rounded-2xl relative"> 
            <img :src="product.img" alt="Product 1" class="aspect-square rounded-2xl">
            <label v-if="product.label != 'null'" class="absolute top-3 left-3 py-1 px-2 rounded-lg leading-snug text-white bg-highlight-red">35% Off</label>
@@ -26,11 +23,9 @@
     </RouterLink>
 </template>
 <script>
-import { RouterLink } from 'vue-router';
-import ProductDetails from '../../../pages/client/ProductDetails.vue';
     export default{
         props:{
             product:{type: Object, required:true}
         }, 
     }
-</script>
+</script>       
